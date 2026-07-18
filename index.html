@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es" data-v="2" data-l="2">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ITA · Resultores — Innovación, Transformación &amp; Aceleración</title>
+<meta name="description" content="No somos poetas digitales. Somos Resultores comprometidos con alcanzar los objetivos de nuestros clientes.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 658 569%22><g transform=%22translate%280,569%29 scale%280.1,-0.1%29%22 fill=%22%23F37135%22><path d=%22M2684 5537 c-1075 -1351 -1919 -2804 -2457 -4235 -167 -442 -188%0A-690 -80 -920 167 -354 625 -390 1043 -82 437 323 777 934 939 1690 28 131 82%0A452 77 457 -1 1 -191 -51 -421 -116 -231 -64 -422 -116 -423 -115 -5 3 1436%0A2193 1445 2197 7 2 1447 -2193 1441 -2197 -1 -1 -192 51 -423 115 -230 65%0A-420 117 -421 116 -1 -1 6 -60 17 -132 118 -817 387 -1435 803 -1851 248 -247%0A490 -367 746 -368 145 -1 225 22 327 93 147 103 216 239 230 450 11 174 -29%0A358 -144 663 -398 1059 -992 2184 -1686 3193 -258 374 -744 1027 -886 1187 -3%0A4 -61 -61 -127 -145z%22/></g></svg>">
+<meta property="og:title" content="ITA · Resultores — No somos poetas digitales">
+<meta property="og:description" content="Innovación, Transformación &amp; Aceleración. Comprometidos con alcanzar los objetivos de nuestros clientes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ita.digital/">
+<meta property="og:locale" content="es_MX">
+<meta name="theme-color" content="#F37135">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=Assistant:wght@300;400;600;700&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --amber:#F37135;         /* NARANJA ITA - muestreado del logotipo */
+  --amber-lo:#FF8348;      /* highlight del degradado original */
+  --amber-deep:#A34A0E;    /* naranja legible sobre blanco (AA) */
+  --ink:#2E3538;           /* slate del logotipo */
+  --ink-2:#4A5257;
+  --coal:#1A1A16;          /* tinta sobre naranja - 6.4:1 */
+  --mute:#8A8E90;
+  --logo-gray:#BDBFC1;
+  --hair:#E3E5E6;
+  --paper:#FFFFFF;
+  --display:'Archivo',system-ui,sans-serif;
+  --body:'Assistant',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --serif:'Instrument Serif',Georgia,serif;
+  --gut:clamp(20px,5vw,72px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+section[id],main[id]{scroll-margin-top:96px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--coal);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--gut)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--amber);flex:none}
+.triad{display:flex;flex-wrap:wrap;align-items:center;gap:10px 26px;font-family:var(--mono);font-weight:500;
+  font-size:clamp(14px,1.35vw,17px);letter-spacing:.1em;text-transform:uppercase;color:var(--coal)}
+.triad::before{display:none}
+.triad span{display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+.triad b{font-weight:500;border-bottom:3px solid #fff;padding-bottom:4px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:86px;position:relative}
+.brand{display:flex;align-items:center;gap:13px;text-decoration:none}
+.brand svg{width:42px;height:42px;flex:none;color:var(--amber)}
+.brand b{font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-.015em;color:#5C5C5C;display:flex;align-items:center;gap:7px}
+.brand b i{color:var(--amber);font-style:normal;font-size:26px;line-height:0}
+.brand b em{color:var(--logo-gray);font-style:normal;font-weight:800}
+.nav ul{display:flex;gap:30px;list-style:none}
+.nav ul a{font-size:15px;text-decoration:none;font-weight:600;padding:6px 0;border-bottom:2px solid transparent}
+.nav ul a:hover{border-color:var(--amber)}
+.nav .cta{background:var(--ink);color:#fff;padding:10px 20px;border-radius:2px;font-weight:700;font-size:14px;text-decoration:none}
+.nav .cta:hover{background:var(--amber);color:var(--coal)}
+#mtoggle{display:none}
+.mnav{display:none}
+.burger{display:none;width:44px;height:44px;border:2px solid var(--coal);border-radius:2px;cursor:pointer;place-items:center;background:transparent}
+.burger svg{width:22px;height:22px;stroke:var(--coal);stroke-width:2.6;fill:none;stroke-linecap:square}
+@media(max-width:860px){
+  .nav ul{display:none}
+  .nav .cta{display:none}
+  .burger{display:grid}
+  #mtoggle:checked ~ .mnav{display:block}
+  .mnav{display:none;position:absolute;top:86px;left:0;right:0;background:var(--amber);border-bottom:2px solid var(--coal);padding:8px var(--gut) 18px}
+  .mnav a{display:block;padding:15px 0;font-family:var(--display);font-weight:800;font-size:21px;color:var(--coal);text-decoration:none;border-bottom:1px solid rgba(26,26,22,.18)}
+  .mnav a:last-child{border-bottom:none}
+}
+
+/* hero */
+.hero{padding:clamp(64px,11vw,130px) 0 clamp(56px,8vw,96px);position:relative;overflow:hidden}
+.hero .eyebrow{margin-bottom:34px}
+.thesis{font-family:var(--display);font-weight:900;font-size:clamp(40px,7.6vw,96px);line-height:.94;letter-spacing:-.035em;max-width:16ch}
+.thesis .poet{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em;color:var(--mute)}
+.thesis .res{color:var(--amber);position:relative;white-space:nowrap}
+.thesis .res::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.075em;background:var(--ink)}
+.hero p.lede{margin-top:32px;max-width:52ch;font-size:clamp(18px,1.7vw,21px);color:var(--ink-2)}
+.hero-actions{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 30px;border-radius:2px;font-weight:700;font-size:15px;text-decoration:none;border:2px solid var(--ink);cursor:pointer;font-family:var(--body)}
+.btn-solid{background:var(--ink);color:#fff}
+.btn-solid:hover{background:var(--amber);border-color:var(--amber);color:var(--coal)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+
+/* rail I-T-A */
+.rail{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);background:#FCFBFA}
+.rail .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.vec{padding:44px 34px 46px;position:relative;border-right:1px solid var(--hair)}
+.vec:last-child{border-right:none}
+.vec .k{width:62px;height:62px;border-radius:50%;background:var(--ink);color:var(--amber);
+  display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:27px;
+  letter-spacing:0;margin-bottom:20px;transition:transform .35s ease}
+.vec:hover .k{transform:translateY(-4px)}
+.vec h3{font-family:var(--display);font-weight:800;font-size:26px;color:var(--ink);letter-spacing:-.025em;margin:0 0 12px}
+.vec p{font-size:16.5px;color:var(--ink-2);line-height:1.6}
+.vec::after{content:"";position:absolute;left:0;bottom:-1px;height:4px;width:0;background:var(--amber);transition:width .45s ease}
+.vec:hover::after{width:100%}
+@media(max-width:860px){.rail .wrap{grid-template-columns:1fr}.vec{border-right:none;border-bottom:1px solid var(--hair)}}
+
+/* casos */
+.cases{background:var(--ink);color:#fff;padding:clamp(64px,9vw,104px) 0}
+.cases h2{color:#fff}
+.cases .eyebrow{color:#9AA0A3}
+.cgrid2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#454E52;border:1px solid #454E52}
+.case{background:var(--ink);padding:clamp(28px,3.4vw,42px);display:flex;flex-direction:column;gap:16px}
+.case .tag{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+.case .metric{font-family:var(--display);font-weight:900;font-size:clamp(44px,6.4vw,80px);line-height:.86;letter-spacing:-.045em;color:#fff}
+.case .metric small{display:block;font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-top:14px}
+.case .claim{font-family:var(--display);font-weight:800;font-size:clamp(23px,2.7vw,32px);line-height:1.1;letter-spacing:-.025em;color:#fff}
+.case p{color:#CBD1D4;font-size:17.5px;line-height:1.6}
+.case .gap{margin-top:auto;padding-top:16px;border-top:1px solid #454E52;font-family:var(--mono);font-size:11px;line-height:1.7;letter-spacing:.04em;color:var(--amber)}
+@media(max-width:860px){.cgrid2{grid-template-columns:1fr}}
+
+/* secciones */
+.sec{padding:clamp(64px,9vw,108px) 0}
+.sec-head{margin-bottom:48px;max-width:60ch}
+.sec-head h2,.about h2{font-family:var(--display);font-weight:900;font-size:clamp(30px,4.4vw,52px);letter-spacing:-.03em;line-height:1.04;margin-top:18px}
+.about{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,80px);align-items:start}
+.about .quote{border-left:3px solid var(--amber);padding:6px 0 6px 22px;font-size:21px;line-height:1.5;color:var(--ink)}
+.sig{margin-top:28px;padding-top:22px;border-top:1px solid var(--hair);display:flex;align-items:center;gap:18px}
+.sig .ph{width:78px;height:78px;flex:none;border-radius:50%;background:var(--ink);object-fit:cover;display:block}
+.sig h4{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.01em}
+.sig span{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-deep)}
+@media(max-width:880px){.about{grid-template-columns:1fr}}
+
+/* servicios */
+.svc{display:grid;grid-template-columns:64px 1fr 1.25fr;gap:clamp(16px,3vw,44px);padding:30px 0;border-bottom:1px solid var(--hair);align-items:baseline;transition:background .2s}
+.svc:hover{background:#FCFBFA}
+.svc .n{font-family:var(--mono);font-size:12px;color:var(--mute)}
+.svc h3{font-family:var(--display);font-weight:800;font-size:clamp(20px,2.4vw,28px);letter-spacing:-.02em}
+.svc:hover h3{color:var(--amber-deep)}
+.svc p{color:var(--ink-2);font-size:17.5px;line-height:1.6}
+.svc.lead h3{color:var(--amber-deep)}
+.svc h3 .expand{display:block;font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--mute);margin-top:10px;line-height:1.7}
+.svc .frase{display:block;font-family:var(--display);font-weight:800;font-size:clamp(19px,2vw,23px);
+  line-height:1.2;letter-spacing:-.02em;color:var(--ink);margin-bottom:14px}
+@media(max-width:760px){.svc{grid-template-columns:1fr;gap:8px;padding:24px 0}.svc .n{order:-1}}
+
+/* contacto */
+.contact{background:var(--ink);color:#fff}
+.contact h2{color:#fff}
+.contact .eyebrow{color:#9AA0A3}
+.cgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,72px)}
+.field{margin-bottom:18px;display:block}
+.field span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#9AA0A3;margin-bottom:8px}
+.field input,.field textarea{width:100%;background:transparent;border:1px solid #454E52;color:#fff;padding:14px 15px;border-radius:2px;font-family:var(--body);font-size:17px}
+.field input:focus,.field textarea:focus{border-color:var(--amber)}
+.field textarea{min-height:118px;resize:vertical}
+.contact .btn-solid{background:var(--amber);border-color:var(--amber);color:var(--coal)}
+.contact .btn-solid:hover{background:#fff;border-color:#fff;color:var(--coal)}
+.dl{border-top:1px solid #454E52;padding-top:20px;margin-top:22px}
+.dl:first-child{border-top:none;padding-top:0;margin-top:0}
+.dl dt{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#9AA0A3;margin-bottom:7px}
+.dl dd{font-size:17.5px;line-height:1.55}
+.dl dd a{color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(243,113,53,.45)}
+@media(max-width:880px){.cgrid{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--hair);padding:34px 0;font-size:14px;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+
+.todo{outline:1px dashed var(--amber);outline-offset:3px;background:rgba(243,113,53,.08);padding:14px 16px}
+.todo-tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--amber-deep);text-transform:uppercase;display:block;margin-bottom:6px}
+
+/* ===== NAV N1 · COAL ===== */
+.nav{background:rgba(26,26,22,.97);border-bottom:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px)}
+.brand b{color:#fff}
+.brand b i{color:var(--amber)}
+.brand b em{color:#B9BDBF}
+.nav ul a{color:#E8E9EA}
+.nav ul a:hover{border-color:var(--amber)}
+.nav .cta{background:var(--amber);color:var(--coal)}
+.nav .cta:hover{background:#fff;color:var(--coal)}
+.burger{border-color:#fff}
+.burger svg{stroke:#fff}
+.mnav{background:var(--coal);border-bottom-color:rgba(255,255,255,.2)}
+.mnav a{color:#fff;border-bottom-color:rgba(255,255,255,.14)}
+
+
+
+/* ===== LOGO PROTAGONICO ===== */
+.hero .wrap{position:relative;z-index:2}
+.heromark{pointer-events:none}
+.hero-copy{min-width:0}
+
+
+/* L2 · CONTRAPESO - la marca es un signo */
+[data-l="2"] .hero .wrap{display:grid;grid-template-columns:1.35fr .65fr;gap:clamp(28px,4vw,60px);align-items:end}
+@keyframes rise{from{opacity:0;transform:translateY(46px)}to{opacity:1;transform:translateY(0)}}
+[data-l="2"] .heromark{display:block;animation:rise .9s cubic-bezier(.16,.84,.3,1) .15s backwards;width:100%;max-width:clamp(190px,27vw,350px);aspect-ratio:658/569;height:auto;
+  color:var(--coal);justify-self:end;margin-bottom:2px;filter:drop-shadow(0 22px 0 rgba(26,26,22,.14));transition:transform .5s cubic-bezier(.2,.9,.3,1)}
+[data-l="2"] .hero:hover .heromark{transform:translateY(-10px)}
+@media(max-width:860px){
+  [data-l="2"] .hero .wrap{grid-template-columns:1fr;gap:26px}
+  [data-l="2"] .heromark{order:-1;justify-self:start;max-width:96px}
+}
+
+
+
+/* ============ VARIANTE B · BLOQUE NARANJA ============ */
+[data-v="2"] .hero,[data-v="3"] .hero{background:var(--amber);color:var(--coal)}
+[data-v="2"] .hero .eyebrow,[data-v="3"] .hero .eyebrow{color:rgba(26,26,22,.62)}
+[data-v="2"] .hero .eyebrow::before,[data-v="3"] .hero .eyebrow::before{background:var(--coal)}
+[data-v="2"] .thesis,[data-v="3"] .thesis{color:var(--coal)}
+[data-v="2"] .thesis .poet,[data-v="3"] .thesis .poet{color:rgba(26,26,22,.42)}
+[data-v="2"] .thesis .res,[data-v="3"] .thesis .res{color:var(--coal)}
+[data-v="2"] .thesis .res::after,[data-v="3"] .thesis .res::after{background:#fff}
+[data-v="2"] .hero p.lede,[data-v="3"] .hero p.lede{color:rgba(26,26,22,.8)}
+[data-v="2"] .btn,[data-v="3"] .btn{border-color:var(--coal)}
+[data-v="2"] .btn-solid,[data-v="3"] .btn-solid{background:var(--coal);color:#fff}
+[data-v="2"] .btn-solid:hover,[data-v="3"] .btn-solid:hover{background:#fff;color:var(--coal);border-color:#fff}
+[data-v="2"] .btn-ghost:hover,[data-v="3"] .btn-ghost:hover{background:var(--coal);color:#fff}
+
+/* ============ VARIANTE C · VOLTAJE ALTERNADO ============ */
+[data-v="3"] .rail{background:var(--ink);border-color:var(--ink)}
+[data-v="3"] .vec{border-right-color:rgba(255,255,255,.16)}
+[data-v="3"] .vec h3{color:#fff}
+[data-v="3"] .vec p{color:#BFC5C8}
+[data-v="3"] .vec .k{background:var(--coal)}
+@media(max-width:860px){[data-v="3"] .vec{border-bottom-color:rgba(255,255,255,.16)}}
+[data-v="3"] .cases{background:var(--amber);color:var(--coal)}
+[data-v="3"] .cases h2{color:var(--coal)}
+[data-v="3"] .cases .eyebrow{color:rgba(26,26,22,.62)}
+[data-v="3"] .cases .eyebrow::before{background:var(--coal)}
+[data-v="3"] .cgrid2{background:rgba(26,26,22,.22);border-color:rgba(26,26,22,.22)}
+[data-v="3"] .case{background:var(--amber)}
+[data-v="3"] .case .tag{color:rgba(26,26,22,.66)}
+[data-v="3"] .case .metric,[data-v="3"] .case .claim{color:var(--coal)}
+[data-v="3"] .case .metric small{color:rgba(26,26,22,.66)}
+[data-v="3"] .case p{color:rgba(26,26,22,.82)}
+[data-v="3"] .case .gap{border-top-color:rgba(26,26,22,.22);color:#fff}
+
+</style>
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 658 569"><g transform="translate(0,569) scale(0.1,-0.1)" fill="currentColor" stroke="none"><path d="M2684 5537 c-1075 -1351 -1919 -2804 -2457 -4235 -167 -442 -188
+-690 -80 -920 167 -354 625 -390 1043 -82 437 323 777 934 939 1690 28 131 82
+452 77 457 -1 1 -191 -51 -421 -116 -231 -64 -422 -116 -423 -115 -5 3 1436
+2193 1445 2197 7 2 1447 -2193 1441 -2197 -1 -1 -192 51 -423 115 -230 65
+-420 117 -421 116 -1 -1 6 -60 17 -132 118 -817 387 -1435 803 -1851 248 -247
+490 -367 746 -368 145 -1 225 22 327 93 147 103 216 239 230 450 11 174 -29
+358 -144 663 -398 1059 -992 2184 -1686 3193 -258 374 -744 1027 -886 1187 -3
+4 -61 -61 -127 -145z"/></g></symbol>
+</svg>
+
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="ITA Resultores"><svg><use href="#mark"/></svg><b>ITA<i>·</i><em>Resultores</em></b></a>
+    <nav><ul>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+    </ul></nav>
+    <a class="cta" href="#contacto">Trabajemos juntos</a>
+    <input type="checkbox" id="mtoggle" aria-label="Abrir menú">
+    <label class="burger" for="mtoggle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></label>
+    <nav class="mnav" aria-label="Menú móvil">
+      <a href="#servicios" onclick="mtoggle.checked=false">Servicios</a>
+      <a href="#nosotros" onclick="mtoggle.checked=false">Nosotros</a>
+      <a href="#contacto" onclick="mtoggle.checked=false">Trabajemos juntos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <svg class="heromark" aria-hidden="true"><use href="#mark"/></svg>
+    <div class="wrap">
+      <div class="hero-copy">
+      <p class="eyebrow triad">
+        <span><b>Innovación</b></span>
+        <span><b>Transformación</b></span>
+        <span><b>Aceleración</b></span>
+      </p>
+      <h1 class="thesis">No somos <span class="poet">poetas</span> digitales.<br>Somos <span class="res">Resultores</span>.</h1>
+      <p class="lede">Comprometidos con alcanzar los objetivos de nuestros clientes. Aceleramos la innovación y la disrupción en su negocio — con la disciplina de medir lo que pasa después del clic.</p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="#contacto">Trabajemos juntos</a>
+        <a class="btn btn-ghost" href="#servicios">Ver qué hacemos</a>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rail" id="vectores">
+    <div class="wrap">
+      <article class="vec"><p class="k">I</p><h3>Innovación</h3><p>La innovación hoy debe ser uno de los pilares estratégicos de cualquier empresa para poder sobrevivir.</p></article>
+      <article class="vec"><p class="k">T</p><h3>Transformación</h3><p>Entender todas las oportunidades que ofrecen las nuevas tecnologías es mandatorio para las empresas.</p></article>
+      <article class="vec"><p class="k">A</p><h3>Aceleración</h3><p>Se requiere mayor velocidad y agilidad: un cambio de mentalidad y la adopción de metodologías ágiles.</p></article>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     RESULTADOS: OCULTO hasta tener los numeros completos.
+     Para publicarla: borra style="display:none" de la linea siguiente
+     y elimina los <p class="gap"> de cada caso.
+     ============================================================ -->
+<section class="cases" id="casos" style="display:none">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Resultados</p><h2>Lo que se movió</h2></div>
+      <div class="cgrid2">
+        <article class="case">
+          <p class="tag">Servicios financieros · B2B + B2C</p>
+          <p class="metric">+<span id="cnt" data-target="20000">20,000</span><small>Leads calificados</small></p>
+          <p>Empresa del sector financiero con un amplio portafolio, operando simultáneamente en B2B y B2C. Diseñamos y ejecutamos el motor de demanda para ambos frentes.</p>
+          <p class="gap">FALTA → ventana temporal · CPL · % que cerró</p>
+        </article>
+        <article class="case">
+          <p class="tag">Construcción · B2B2C</p>
+          <p class="claim">Dos fábricas, canal directo al carpintero.</p>
+          <p>Marketplace B2B2C implementado para el sector de la construcción: elimina la intermediación y le permite a dos fábricas llegar al carpintero de forma directa y ágil.</p>
+          <p class="gap">FALTA → un número. GMV, carpinteros activos, o meses a break-even.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="servicios">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Servicios</p><h2>Nuestras áreas de experiencia</h2></div>
+      <div class="svc lead"><p class="n">01</p><h3>Resultoría</h3><p>Generando innovación, transformación y aceleración para maximizar las oportunidades en la nueva economía.</p></div>
+      <div class="svc lead"><p class="n">02</p><h3>AI &amp; Agentic AI</h3><p>Agentes de AI operando dentro de tu proceso comercial: califican demanda, personalizan a escala y ejecutan el trabajo repetitivo que hoy le consume horas a tu equipo. AI que se mide en ventas cerradas y en tiempo recuperado — no en demos.</p></div>
+      <div class="svc lead">
+        <p class="n">03</p>
+        <h3>FARO<br><span class="expand">Focused Audience,<br>Revenue Outcomes</span></h3>
+        <p><strong class="frase">La demanda ya existe. La pregunta es quién la ve primero.</strong>
+        Inteligencia y activación de audiencias: quién compra, cuándo, y qué lo dispara. Dejas de comprar audiencias por descripción y empiezas a comprarlas por evidencia.</p>
+      </div>
+      <div class="svc lead"><p class="n">04</p><h3>Ecommerce &amp;<br>Marketplaces</h3><p>Del catálogo a la transacción: conexión relevante y oportuna con cada posible cliente — B2B, B2C o B2B2C. Donde el resultado deja de ser una métrica y se convierte en una venta.</p></div>
+    </div>
+  </section>
+
+  <section class="sec" id="nosotros" style="border-top:1px solid var(--hair)">
+    <div class="wrap about">
+      <div><p class="eyebrow">Quiénes somos</p><h2>Tu socio estratégico</h2></div>
+      <div>
+        <p class="quote">Somos un grupo de expertos, listos para acompañarte en el proceso de adaptación y transformación hacia la nueva economía.</p>
+        <p style="margin-top:24px">Por más de 32 años: el crecimiento exponencial, la penetración de los teléfonos inteligentes y la democratización de la tecnología ofrecen oportunidades nunca antes vistas para generar mayor impacto e influencia sobre los prospectos de nuestras marcas.</p>
+        <div class="sig">
+          <img class="ph" src="data:image/jpeg;base64,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" alt="Andrés Navarro" width="78" height="78">
+          <div><h4>Andrés Navarro</h4><span>Founder &amp; CEO</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec contact" id="contacto">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Déjanos tus datos</p><h2>¿Cómo podemos ayudarte?</h2></div>
+      <div class="cgrid">
+        <div>
+          <label class="field"><span>Nombre (requerido)</span><input id="f-nom" type="text" autocomplete="name" required></label>
+          <label class="field"><span>Email (requerido)</span><input id="f-eml" type="email" autocomplete="email" required></label>
+          <label class="field"><span>Empresa</span><input id="f-emp" type="text" autocomplete="organization"></label>
+          <label class="field"><span>¿En qué podemos colaborar?</span><textarea id="f-msg"></textarea></label>
+          <button class="btn btn-solid" type="button" id="f-send">Enviar mensaje</button>
+          <p id="fb" hidden style="margin-top:14px;font-family:var(--mono);font-size:13px;color:var(--amber)"></p>
+        </div>
+        <div>
+          <dl class="dl"><dt>Teléfono</dt><dd><a href="tel:+525620217366">+52 56 2021 7366</a></dd></dl>
+          <dl class="dl"><dt>Email</dt><dd><a href="mailto:andres@ita.digital">andres@ita.digital</a></dd></dl>
+          <dl class="dl"><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/navarroandres/" target="_blank" rel="noopener">/in/navarroandres</a></dd></dl>
+          <dl class="dl"><dt>Dónde operamos</dt><dd>Ciudad de México<br><span style="color:#9AA0A3;font-size:15px">Clientes en toda Iberoamérica</span></dd></dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:#5C5C5C;font-family:var(--display);font-weight:800">ITA<span style="color:var(--amber)">·</span><span style="color:var(--logo-gray)">Resultores</span></strong> — Innovación · Transformación · Aceleración</p>
+    <p>© 2026 ITA · Resultores</p>
+  </div>
+</footer>
+
+
+<script>
+});
+(function(){
+  if('IntersectionObserver' in window){
+    var c=document.getElementById('cnt');
+    if(c && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+      new IntersectionObserver(function(e,o){
+        if(!e[0].isIntersecting) return; o.disconnect();
+        var t=+c.dataset.target, s=performance.now();
+        (function f(n){var p=Math.min((n-s)/1400,1), v=Math.round(t*(1-Math.pow(1-p,3)));
+          c.textContent=v.toLocaleString('en-US'); if(p<1) requestAnimationFrame(f);})(s);
+      },{threshold:.5}).observe(c);
+    }
+  }
+})();
+</script>
+<script>
+/* ==== HUBSPOT: pega aqui los dos IDs (HubSpot -> Marketing -> Forms -> Embed) ==== */
+var HS_PORTAL_ID = "51491481";   // portal (mismo de AEVUM)
+var HS_FORM_GUID = "df5c865f-ff96-4627-aeb1-9546eca63c8e";   // form "ITA Web"
+/* =============================================================================== */
+document.getElementById('f-send').addEventListener('click', function(){
+  var nom=document.getElementById('f-nom').value.trim(),
+      eml=document.getElementById('f-eml').value.trim(),
+      emp=document.getElementById('f-emp').value.trim(),
+      msg=document.getElementById('f-msg').value.trim(),
+      fb=document.getElementById('fb'), btn=this;
+  fb.hidden=false;
+  if(!nom||!eml||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(eml)){fb.textContent='Nombre y un email válido son requeridos.';return;}
+  var mailto='mailto:andres@ita.digital?subject='+encodeURIComponent('Contacto ITA — '+nom+(emp?' ('+emp+')':''))+'&body='+encodeURIComponent(msg+'\n\n'+nom+' · '+eml);
+  if(!HS_PORTAL_ID||!HS_FORM_GUID){ location.href=mailto; fb.textContent='Abriendo tu correo…'; return; }
+  btn.disabled=true; fb.textContent='Enviando…';
+  var hutk=(document.cookie.match(/hubspotutk=([^;]+)/)||[])[1];
+  fetch('https://api.hsforms.com/submissions/v3/integration/submit/'+HS_PORTAL_ID+'/'+HS_FORM_GUID,{
+    method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({fields:[
+      {objectTypeId:'0-1',name:'firstname',value:nom},
+      {objectTypeId:'0-1',name:'email',value:eml},
+      {objectTypeId:'0-1',name:'company',value:emp},
+      {objectTypeId:'0-1',name:'message',value:msg}],
+      context:{hutk:hutk,pageUri:location.href,pageName:document.title}})
+  }).then(function(r){ if(!r.ok) throw 0;
+    fb.textContent='Recibido. Te contactamos en menos de 24 horas hábiles.';
+    ['f-nom','f-eml','f-emp','f-msg'].forEach(function(i){document.getElementById(i).value='';});
+  }).catch(function(){ location.href=mailto; fb.textContent='No se pudo enviar — abriendo tu correo como respaldo.';
+  }).finally(function(){ btn.disabled=false; });
+});
+</script>
+</body>
+</html>
