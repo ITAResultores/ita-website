@@ -1,4 +1,4 @@
-<!doctype html><html lang="es-MX"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow,noarchive"><title>Nu Intel</title><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="apple-mobile-web-app-title" content="Nu Intel"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body><title>Nu México en el bolsillo</title>
+<!doctype html><html lang="es-MX"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="apple-mobile-web-app-title" content="Nu Intel"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body><title>Nu México en el bolsillo</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#14022A">
@@ -152,6 +152,33 @@ button.li { background: none; border: 0; border-bottom: 1px solid var(--line); c
 .btn.ghost { background: var(--card2); color: #fff; margin-top: 8px; }
 .ph { border-radius: 18px; background: linear-gradient(135deg, #2C1049, #1B0630); aspect-ratio: 16 / 7; display: grid; place-items: center; text-align: center; color: var(--fg2); font-size: 13px; padding: 20px; }
 .ph b { display: block; color: #fff; font-size: 15px; margin-bottom: 4px; }
+.evph { position: relative; display: block; width: 100%; aspect-ratio: 4 / 5; max-height: 52vh; border: 0; padding: 0; border-radius: 20px; overflow: hidden; background: linear-gradient(135deg, #2C1049, #1B0630); cursor: zoom-in; }
+.evph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 0; background: transparent; opacity: 0; transition: opacity .35s ease; }
+.evph img.lo { filter: blur(14px); transform: scale(1.08); }
+.evph.haslo img.lo { opacity: 1; }
+.evph.loaded img.hi { opacity: 1; }
+.evph.loaded .spin, .viewer.loaded .spin { display: none; }
+.spin { position: absolute; left: 50%; top: 50%; width: 30px; height: 30px; margin: -15px 0 0 -15px; border-radius: 50%; border: 3px solid rgba(255,255,255,.18); border-top-color: #fff; animation: sp .8s linear infinite; }
+@keyframes sp { to { transform: rotate(360deg); } }
+.zoomhint { position: absolute; right: 10px; bottom: 10px; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: rgba(18,2,31,.6); backdrop-filter: blur(8px); color: #fff; font-size: 16px; opacity: 0; transition: opacity .3s; }
+.evph.loaded .zoomhint { opacity: 1; }
+.evph.fail { cursor: default; display: grid; place-items: center; aspect-ratio: 16 / 7; }
+.evfail { color: var(--fg2); font-size: 13px; text-align: center; position: relative; }
+.evfail b { display: block; color: #fff; font-size: 15px; margin-bottom: 4px; }
+.evnav { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 10px; }
+.evnav span { font-size: 12.5px; color: var(--fg3); }
+.evnav button { width: 40px; height: 34px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: #fff; font-size: 20px; line-height: 1; cursor: pointer; }
+.scanlink { display: block; text-align: center; margin-top: 12px; font-size: 12.5px; color: var(--fg3); text-decoration: none; }
+.viewer { position: fixed; inset: 0; z-index: 60; background: rgba(0,0,0,calc(.96 * var(--dim, 1))); opacity: 0; transition: opacity .22s; touch-action: none; }
+.viewer.on { opacity: 1; }
+.vstage { position: absolute; inset: 0; display: grid; place-items: center; overflow: hidden; }
+.vstage img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 0; background: transparent; will-change: transform; user-select: none; -webkit-user-drag: none; }
+.vtop { position: absolute; left: 0; right: 0; top: 0; display: flex; justify-content: space-between; align-items: center; padding: calc(10px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px)); background: linear-gradient(rgba(0,0,0,.55), transparent); }
+.vcount { color: rgba(255,255,255,.8); font-size: 13px; }
+.vx { width: 36px; height: 36px; border-radius: 50%; border: 0; background: rgba(255,255,255,.16); color: #fff; font-size: 15px; cursor: pointer; }
+.vcap { position: absolute; left: 0; right: 0; bottom: 0; padding: 30px max(16px, env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); background: linear-gradient(transparent, rgba(0,0,0,.7)); display: flex; flex-direction: column; gap: 2px; pointer-events: none; }
+.vcap b { font-size: 14.5px; font-weight: 600; }
+.vcap span { font-size: 12.5px; color: rgba(255,255,255,.7); }
 /* tabbar */
 .tabbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; max-width: 460px; margin: 0 auto; padding: 8px max(10px, env(safe-area-inset-right, 0px)) calc(8px + env(safe-area-inset-bottom, 0px)) max(10px, env(safe-area-inset-left, 0px)); }
 .tabbar nav { display: grid; grid-template-columns: repeat(5, 1fr); background: rgba(34,10,59,.72); backdrop-filter: blur(22px) saturate(1.6); -webkit-backdrop-filter: blur(22px) saturate(1.6); border: 1px solid rgba(210,165,255,.16); border-radius: 26px; padding: 6px; box-shadow: 0 12px 40px rgba(0,0,0,.45); }
@@ -389,17 +416,94 @@ drawAI();
 const SP = D.spots.map((r) => ({ marca: r[0], orig: r[1], plaza: r[2], lat: r[3], lon: r[4], tar: r[5], imp: r[6], tipo: r[7], msg: r[8], mun: r[9], f: r[10], ev: r[11], dir: r[12], fmt: r[13], cve: r[14] }));
 let pz = 'Valle de México';
 const feats = topojson.feature(TOPO, TOPO.objects[Object.keys(TOPO.objects)[0]]).features;
-function evSheet(r) {
-  openSheet((b) => {
-    const ph = h('div', 'ph'); ph.innerHTML = '<div><b>Foto de evidencia</b>Se abre en el sistema de Scan Group</div>';
-    b.append(ph, h('h3', null, r.msg), h('p', 'meta', r.orig + ' · ' + r.tipo + ' · ' + r.fmt));
-    const dl = h('dl');
-    [['Fecha', new Date(r.f + 'T12:00').toLocaleDateString('es-MX', { day: 'numeric', month: 'short' })], ['Ubicación', r.mun + ', ' + r.plaza], ['Dirección', r.dir], ['Tarifa', r.tar ? '$' + fmt(r.tar) : 'Sin tarifa'], ['Impactos', fmt(r.imp)]].forEach(([k, v]) => dl.append(h('dt', null, k), h('dd', null, v)));
-    b.append(dl);
-    if (/^https:\/\//.test(r.ev)) { const a = h('a', 'btn', 'Ver foto de evidencia ↗'); a.href = r.ev; a.target = '_blank'; a.rel = 'noopener noreferrer'; b.append(a); }
-    const c = h('button', 'btn ghost', 'Cerrar'); c.onclick = closeSheet; b.append(c);
-  });
+// ---------- evidencia: foto optimizada por Vercel, con respaldo directo
+const ON_SITE = /(^|\.)ita\.digital$/.test(location.hostname) || /\.vercel\.app$/.test(location.hostname);
+function evSrc(r, w) { return ON_SITE ? '/_vercel/image?url=' + encodeURIComponent(r.ev) + '&w=' + w + '&q=' + (w > 600 ? 72 : 40) : r.ev; }
+function loadPhoto(img, r, w, onok, onfail) {
+  let triedDirect = !ON_SITE;
+  img.onload = () => onok && onok();
+  img.onerror = () => { if (!triedDirect) { triedDirect = true; img.src = r.ev; } else if (onfail) onfail(); };
+  img.src = evSrc(r, w);
 }
+const pre = new Map();
+function preload(r) { if (!r || !/^https:\/\//.test(r.ev) || pre.has(r.ev)) return; const i = new Image(); i.src = evSrc(r, 1080); pre.set(r.ev, i); }
+function evSheet(r, list) {
+  list = list && list.length ? list : [r];
+  let k = Math.max(0, list.indexOf(r));
+  openSheet((b) => renderEv(b, list, k));
+}
+function renderEv(b, list, k) {
+  const r = list[k]; b.replaceChildren();
+  const ok = /^https:\/\//.test(r.ev);
+  const fr = h('button', 'evph'); fr.type = 'button'; fr.setAttribute('aria-label', 'Ver foto en pantalla completa');
+  const lo = h('img', 'lo'); lo.alt = ''; lo.setAttribute('aria-hidden', 'true');
+  const hi = h('img', 'hi'); hi.alt = 'Foto de evidencia: ' + r.orig + ', ' + r.tipo + ' en ' + r.mun;
+  const sp = h('div', 'spin'); const zoom = h('span', 'zoomhint', '⤢');
+  fr.append(lo, hi, sp, zoom);
+  if (ok) {
+    loadPhoto(lo, r, 256, () => fr.classList.add('haslo'));
+    loadPhoto(hi, r, 1080, () => fr.classList.add('loaded'), () => { fr.classList.add('fail'); fr.disabled = true; sp.remove(); zoom.remove(); fr.append(Object.assign(h('div', 'evfail'), { innerHTML: '<b>Foto no disponible</b>Ábrela en el sistema de Scan Group' })); const fb = b.querySelector('.btn.full'); if (fb) fb.remove(); });
+    fr.onclick = () => viewer(list, k);
+  } else { fr.classList.add('fail'); fr.disabled = true; sp.remove(); zoom.remove(); fr.append(Object.assign(h('div', 'evfail'), { innerHTML: '<b>Sin foto de evidencia</b>' })); }
+  b.append(fr);
+  if (list.length > 1) {
+    const nav = h('div', 'evnav');
+    const pv = h('button', null, '‹'); pv.type = 'button'; pv.setAttribute('aria-label', 'Anuncio anterior');
+    const nx = h('button', null, '›'); nx.type = 'button'; nx.setAttribute('aria-label', 'Anuncio siguiente');
+    pv.onclick = () => renderEv(b, list, (k - 1 + list.length) % list.length); nx.onclick = () => renderEv(b, list, (k + 1) % list.length);
+    nav.append(pv, h('span', 'num', (k + 1) + ' de ' + list.length + (list.every((x) => x.mun === r.mun) ? ' en ' + r.mun : '')), nx); b.append(nav);
+  }
+  b.append(h('h3', null, r.msg), h('p', 'meta', r.orig + ' · ' + r.tipo + ' · ' + r.fmt));
+  const dl = h('dl');
+  [['Fecha', new Date(r.f + 'T12:00').toLocaleDateString('es-MX', { day: 'numeric', month: 'short' })], ['Ubicación', r.mun + ', ' + r.plaza], ['Dirección', r.dir], ['Tarifa', r.tar ? '$' + fmt(r.tar) : 'Sin tarifa'], ['Impactos', fmt(r.imp)]].forEach(([kk, v]) => dl.append(h('dt', null, kk), h('dd', null, v)));
+  b.append(dl);
+  if (ok) { const f = h('button', 'btn full', 'Ver en pantalla completa'); f.type = 'button'; f.onclick = () => viewer(list, k); b.append(f); }
+  const c = h('button', 'btn ghost', 'Cerrar'); c.type = 'button'; c.onclick = closeSheet; b.append(c);
+  if (ok) { const a = h('a', 'scanlink', 'Abrir original en Scan Group ↗'); a.href = r.ev; a.target = '_blank'; a.rel = 'noopener noreferrer'; b.append(a); }
+  preload(list[(k + 1) % list.length]); preload(list[(k - 1 + list.length) % list.length]);
+  sheet.scrollTop = 0;
+}
+// visor a pantalla completa: pellizco, doble toque, deslizar para pasar y hacia abajo para cerrar
+const vw = h('div', 'viewer'); vw.hidden = true; vw.setAttribute('role', 'dialog'); vw.setAttribute('aria-modal', 'true'); vw.setAttribute('aria-label', 'Foto de evidencia');
+vw.innerHTML = '<div class="vstage"><img alt=""></div><div class="vtop"><span class="vcount num"></span><button type="button" class="vx" aria-label="Cerrar">✕</button></div><div class="vcap"><b></b><span></span></div><div class="spin"></div>';
+document.body.append(vw);
+const vimg = vw.querySelector('img'), vst = vw.querySelector('.vstage');
+let V = { list: [], k: 0, s: 1, x: 0, y: 0 };
+function vApply(anim) { vimg.style.transition = anim ? 'transform .25s ease' : 'none'; vimg.style.transform = `translate(${V.x}px, ${V.y}px) scale(${V.s})`; }
+function vShow() {
+  const r = V.list[V.k]; V.s = 1; V.x = 0; V.y = 0; vApply(false);
+  vw.classList.remove('loaded'); vimg.alt = 'Foto de evidencia: ' + r.orig + ', ' + r.tipo + ' en ' + r.mun;
+  loadPhoto(vimg, r, 1080, () => vw.classList.add('loaded'), () => vw.classList.add('loaded'));
+  vw.querySelector('.vcount').textContent = V.list.length > 1 ? (V.k + 1) + ' / ' + V.list.length : '';
+  vw.querySelector('.vcap b').textContent = r.orig + ' · ' + r.msg; vw.querySelector('.vcap span').textContent = r.tipo + ' · ' + r.mun;
+  preload(V.list[(V.k + 1) % V.list.length]);
+}
+function viewer(list, k) { V.list = list; V.k = k; vw.hidden = false; requestAnimationFrame(() => vw.classList.add('on')); vShow(); }
+function vClose() { vw.classList.remove('on'); setTimeout(() => { vw.hidden = true; }, 220); }
+function vStep(d) { if (V.list.length < 2) return; V.k = (V.k + d + V.list.length) % V.list.length; vShow(); }
+vw.querySelector('.vx').onclick = vClose;
+document.addEventListener('keydown', (e) => { if (vw.hidden) return; if (e.key === 'Escape') vClose(); if (e.key === 'ArrowRight') vStep(1); if (e.key === 'ArrowLeft') vStep(-1); });
+let T = null, lastTap = 0;
+const dist = (a, b) => Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
+vst.addEventListener('touchstart', (e) => {
+  if (e.touches.length === 2) T = { pinch: dist(e.touches[0], e.touches[1]), s: V.s };
+  else { T = { x0: e.touches[0].clientX, y0: e.touches[0].clientY, x: V.x, y: V.y, t: Date.now() }; const now = Date.now(); if (now - lastTap < 280) { V.s = V.s > 1 ? 1 : 2.5; if (V.s === 1) { V.x = 0; V.y = 0; } vApply(true); T = null; } lastTap = now; }
+}, { passive: true });
+vst.addEventListener('touchmove', (e) => {
+  if (!T) return; e.preventDefault();
+  if (T.pinch && e.touches.length === 2) { V.s = Math.min(5, Math.max(1, T.s * dist(e.touches[0], e.touches[1]) / T.pinch)); vApply(false); return; }
+  if (T.pinch) return;
+  const dx = e.touches[0].clientX - T.x0, dy = e.touches[0].clientY - T.y0;
+  if (V.s > 1) { V.x = T.x + dx; V.y = T.y + dy; } else { V.x = dx; V.y = Math.max(0, dy); vw.style.setProperty('--dim', String(Math.max(.35, 1 - Math.max(0, dy) / 500))); }
+  vApply(false);
+}, { passive: false });
+vst.addEventListener('touchend', () => {
+  if (!T || T.pinch) { T = null; if (V.s <= 1.02) { V.s = 1; V.x = 0; V.y = 0; vApply(true); } return; }
+  vw.style.setProperty('--dim', '1');
+  if (V.s === 1) { if (V.y > 120) { vClose(); } else if (V.x < -70) { vStep(1); } else if (V.x > 70) { vStep(-1); } else { V.x = 0; V.y = 0; vApply(true); } }
+  T = null;
+});
+vst.addEventListener('click', (e) => { if (e.target === vst && V.s === 1 && !('ontouchstart' in window)) vClose(); });
 function drawCalle() {
   const s = $('#c-seg'); s.replaceChildren();
   ['Valle de México', 'Monterrey', 'Guadalajara', 'Todas'].forEach((p) => { const b = h('button', null, p === 'Valle de México' ? 'CDMX' : p); b.type = 'button'; b.setAttribute('aria-pressed', String(p === pz)); b.onclick = () => { pz = p; drawCalle(); }; s.append(b); });
@@ -413,12 +517,13 @@ function drawCalle() {
   const cb = $('#c-bars'); cb.replaceChildren(); const m0 = by[0] ? by[0][1].tar : 1;
   by.filter((x) => x[0] !== 'Otras marcas').slice(0, 8).concat(by.filter((x) => x[0] === 'Otras marcas')).forEach(([m, v]) => bar(cb, m + ' · ' + v.n, v.tar, m0, mxnM(v.tar), isNu(m) ? 'nu' : (RFP.has(m) ? '' : 'mut')));
   const tl = $('#c-top'); tl.replaceChildren();
-  rows.slice().sort((a, b) => b.tar - a.tar).slice(0, 8).forEach((r) => {
+  const topRows = rows.slice().sort((a, b) => b.tar - a.tar).slice(0, 8);
+  topRows.forEach((r) => {
     const li = h('button', 'li chev'); li.type = 'button';
     const ic = h('div', 'ic', r.orig.slice(0, 2)); if (isNu(r.marca)) { ic.style.background = 'linear-gradient(160deg,#820AD1,#490B75)'; ic.style.color = '#fff'; }
     const tx = h('div', 'tx'); tx.append(h('b', null, r.orig + ' · ' + r.tipo), h('span', null, r.mun + ' · ' + r.msg));
     const rt = h('div', 'rt'); rt.append(h('b', 'num', mxnM(r.tar)));
-    li.append(ic, tx, rt); li.onclick = () => evSheet(r); tl.append(li);
+    li.append(ic, tx, rt); li.onclick = () => evSheet(r, topRows); tl.append(li);
   });
   drawMap(rows);
 }
@@ -439,7 +544,7 @@ function drawMap(rows) {
     .attr('cx', (p) => proj([p.lon, p.lat])[0]).attr('cy', (p) => proj([p.lon, p.lat])[1]).attr('r', (p) => isNu(p.marca) ? 3.6 : 2.6)
     .attr('fill', (p) => isNu(p.marca) ? '#C47BFF' : RFP.has(p.marca) ? '#FFC56B' : '#6E6680').attr('fill-opacity', (p) => isNu(p.marca) ? 1 : .8)
     .attr('stroke', (p) => isNu(p.marca) ? '#fff' : 'none').attr('stroke-width', .6).style('cursor', 'pointer')
-    .on('click', (e, p) => evSheet(p));
+    .on('click', (e, p) => evSheet(p, ord.filter((q) => q.mun === p.mun).sort((x, y) => y.tar - x.tar)));
   svg.call(d3.zoom().scaleExtent([1, 12]).on('zoom', (e) => { g.attr('transform', e.transform); c.attr('r', (p) => (isNu(p.marca) ? 3.6 : 2.6) / Math.sqrt(e.transform.k)); }));
 }
 let calleDrawn = false;

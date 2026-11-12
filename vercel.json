@@ -26,5 +26,22 @@
       "destination": "/LSix/",
       "permanent": true
     }
-  ]
+  ],
+  "images": {
+    "sizes": [
+      256,
+      1080
+    ],
+    "formats": [
+      "image/webp"
+    ],
+    "minimumCacheTTL": 2678400,
+    "remotePatterns": [
+      {
+        "protocol": "https",
+        "hostname": "firebasestorage.googleapis.com",
+        "pathname": "/v0/b/scanmonitor-sg.appspot.com/**"
+      }
+    ]
+  }
 }
